@@ -7,14 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brands\Commands\Delete\" />
-    <Folder Include="Features\Brands\Commands\Update\" />
-    <Folder Include="Features\Brands\Constants\" />
-    <Folder Include="Features\Brands\Rules\" />
+    <Folder Include="Features\Models - Copy\Commands\" />
+    <Folder Include="Features\Models - Copy\Constants\" />
+    <Folder Include="Features\Models - Copy\Profiles\" />
+    <Folder Include="Features\Models - Copy\Queries\" />
+    <Folder Include="Features\Models - Copy\Rules\" />
     <Folder Include="Features\Models\Commands\" />
     <Folder Include="Features\Models\Constants\" />
-    <Folder Include="Features\Models\Profiles\" />
-    <Folder Include="Features\Models\Queries\" />
     <Folder Include="Features\Models\Rules\" />
   </ItemGroup>
 
@@ -25,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\corePackages\Core.Applcation\Core.Applcation.csproj" />
+    <ProjectReference Include="..\..\..\corePackages\Core.CrossCuttingConserns\Core.CrossCuttingConserns.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 

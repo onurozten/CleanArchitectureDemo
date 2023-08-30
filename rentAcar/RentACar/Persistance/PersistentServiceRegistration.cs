@@ -16,8 +16,9 @@ namespace Persistance
     {
         public static IServiceCollection AddPersistanceServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<BaseDbContext>(opt => opt.UseInMemoryDatabase("Dbdb"));
+            services.AddDbContext<BaseDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString")));
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IModelRepository, ModelRepository>();
 
             return services;
 

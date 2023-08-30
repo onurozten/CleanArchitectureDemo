@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Persistance.Paging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Applcation.Responses;
 
-public class GetListResponse<T>
+public class GetListResponse<T>: BasePageableModel
 {
     private IList<T> _items;
 

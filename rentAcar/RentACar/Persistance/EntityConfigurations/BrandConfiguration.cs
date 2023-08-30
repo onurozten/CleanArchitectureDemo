@@ -17,6 +17,10 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
 
         builder.Property(x => x.Name).IsRequired();
         builder.Property(x => x.CreatedDate).IsRequired();
+
+        builder.HasIndex(indexExpression: x=>x.Name, name:"UK_Brands_Name").IsUnique();
+        builder.HasMany(x => x.Models);
+
         builder.HasQueryFilter(x => !x.DeletedDate.HasValue);
 
 
